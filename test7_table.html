@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test7</title>
+</head>
+
+<body>
+    <!--
+        border  边框厚度 默认0px
+        cellspacing  单元格与单元格距离 模型2px
+        cellpadding  文字与单元格距离 模型1px
+    -->
+    <table border="1px" cellspacing="4px" cellpadding="2px" width="200px" height="200px" bgcolor="blue">
+        <tr>
+            <td>第一行第一列</td>
+            <td>第一行第二列</td>
+        </tr>
+        <tr>
+            <td>第二行第一列</td>
+            <td>第二行第二列</td>
+        </tr>
+    </table>
+    <p style=" text-align: center; font-size: 30px;background-color: burlywood;">带表头的</p>
+    <table border="1px" width="200px" height="100px">
+        <tr>
+            <th>周一</th>
+            <th>周二</th>
+        </tr>
+        <tr>
+            <td>语文</td>
+            <td>数学</td>
+        </tr>
+    </table>
+    <p style=" text-align: center; font-size: 30px;background-color: burlywood;">合并单元格</p>
+    <table border="1px" width="800px" height="100px">
+        <caption>课程表</caption>
+        <tr>
+            <th></th>
+            <th>周一</th>
+            <th>周二</th>
+            <th>周三</th>
+            <th>周四</th>
+            <th>周五</th>
+        </tr>
+        <tr>
+            <td rowspan="2">上午</td>
+            <td colspan="5">语文</td>
+        </tr>
+        <tr>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+        </tr>
+    </table>
+    <p style=" text-align: center; font-size: 30px;background-color: burlywood;">布局</p>
+    <table border="1px" width="800px" height="100px">
+        <caption>课程表</caption>
+        <!-- <thead>
+
+        </thead>
+        <tfoot>
+            
+        </tfoot>
+        <tbody>
+
+
+        </tbody> -->
+
+        <tr>
+            <th colspan="2"></th>
+            <th>周一</th>
+            <th>周二</th>
+            <th>周三</th>
+            <th>周四</th>
+            <th>周五</th>
+        </tr>
+        <tr>
+            <td rowspan="2">上午</td>
+            <td>1</td>
+            <td>语文</td>
+            <td>语文</td>
+            <td>语文</td>
+            <td>语文</td>
+            <td>语文</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+        </tr>
+        <tr>
+            <td colspan="7" style="text-align: center;">午休</td>
+        </tr>
+        <tr>
+            <td rowspan="2">下午</td>
+            <td>1</td>
+            <td>语文</td>
+            <td>语文</td>
+            <td>语文</td>
+            <td>语文</td>
+            <td>语文</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+            <td>数学</td>
+        </tr>
+        
+        
+    </table>
+</body>
+
+</html>

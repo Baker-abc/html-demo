@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>test4</title>
+</head>
+
+<body>
+    <style>
+        #header {
+            background-color: black;
+            color: red;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .syl {
+            width: 100%;
+            border: 1px solid #d4d4d4;
+        }
+
+        .syl td {
+            padding: 10px;
+            width: 20px;
+        }
+    </style>
+    <!-- 
+块级元素
+总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示。宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制。
+常见块级元素： <h1>,<p>, <ul>, <table>。
+
+内联元素
+内联元素在显示时通常不会以新行开始。宽度(width)、高度(height)、内边距的 top/bottom(padding-top/padding-bottom)和外边距的 top/bottom(margin-top/margin-bottom)都不可改变。
+常见内联元素：<b>, <td>, <a>, <img>。
+
+    HTML 布局主要有两种：使用 div 元素的布局和使用 span 元素的布局，那么他们的优缺点是什么呢？下面我们将详细的进行介绍。
+    -->
+    <div id="header">
+        <h1>实验楼</h1>
+    </div>
+
+    <table class="syl">
+        <tr>
+            <td>
+                实验楼
+            </td>
+        </tr>
+    </table>
+
+    <!--
+table 元素布局：
+
+优点：
+理解比较简单。
+不同的浏览器看到的效果一般相同。
+缺点：
+显示样式和数据绑定在一起。
+布局的时候灵活度不高。
+一个页面可能会有大量的 table 元素，代码冗余度高。
+增加带宽。
+搜索引擎不喜欢这样的布局。
+div 元素布局：
+
+优点：
+符合 W3C 标准。
+搜索引擎更加友好。
+样式的调整更加方便，内容和样式的分离，使页面和样式的调整变得更加方便。
+节省代宽，代码冗余度低。
+表现和结构分离，在团队开发中更容易分工合作而减少相互关联性。
+
+    -->
+
+</body>
+
+</html>
