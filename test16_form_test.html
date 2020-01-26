@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>表单练习</legend>
+            用户名：<input type="text" name="name" maxlength="4" value="实验楼" />
+            <br>
+            <br>
+            邮箱：<input type="email" name="email" />
+            <br>
+            <br>
+            电话号码：<input type="tel" name="tel" />
+            <br>
+            <br>
+            密码：<input type="password" name="password" />
+            <br>
+            <br>
+            男：<input type="radio" value="man" />
+            女：<input type="radio" value="woman" />
+            <br>
+            <br>
+            省（市）：
+            <select size="3">
+                <option>北京</option>
+                <option>上海</option>
+                <option>广东</option>
+                <option selected="selected">深圳</option>
+            </select>
+            市（区）：
+            <select>
+                <optgroup label="北京市">
+                    <option>东城区</option>
+                    <option>朝阳区</option>
+                    <option>西城区</option>
+                </optgroup>
+                <optgroup label="上海市">
+                    <option>黄浦区</option>
+                    <option>普陀区</option>
+                    <option>嘉定区</option>
+                </optgroup>
+            </select>
+            <br>
+            <br>
+            你最还的颜色：<input type="text" name="color" list="mycolor" />
+            <datalist id="mycolor">
+                <option>black</option>
+                <option>blue</option>
+                <option>green</option>
+                <option>red</option>
+                <option>black</option>
+                <option>yellow</option>
+            </datalist>
+            <br>
+            <br>
+
+            <input type="file" />
+            <br>
+            <br>
+
+            <input type="submit" value="提交">
+            <input type="reset" value="重置">
+        </fieldset>
+    </form>
+</body>
+
+</html>

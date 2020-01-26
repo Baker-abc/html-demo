@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test15</title>
+</head>
+
+<body>
+    <select>
+        <option>1</option>
+        <option selected="selected">2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    <br>
+    <h2>datalist</h2>
+    <textarea cols="100" rows="5">
+       使用<datalist>元素来为表单小部件提供建议的、自动完成的值，并使用一些<option>子元素来指定要显示的值。然后使用 list 属性将数据列表绑定到一个文本域(通常是一个 <input>元素)
+    </textarea>
+    <br>
+    <label for="myColor">What's your favorite color?</label>
+    <input type="text" name="myColor" id="myColor" list="mySuggestion">
+    <datalist id="mySuggestion">
+        <option>black</option>
+        <option>blue</option>
+        <option>green</option>
+        <option>red</option>
+        <option>black</option>
+        <option>yellow</option>
+    </datalist>
+
+    <br>
+    <br>
+    <br>
+    <fieldset>
+        <legend>What is your favorite color?</legend>
+        <ul>
+            <li>
+                <label for="red">red</label>
+                <input type="radio" checked id="red" name="color" value="red">
+            </li>
+            <li>
+                <label for="yellow">yellow</label>
+                <input type="radio" id="yellow" name="color" value="yellow">
+            </li>
+            <li>
+                <label for="blue">blue</label>
+                <input type="radio" id="blue" name="color" value="blue">
+            </li>
+        </ul>
+        <ul type="circle">
+            <li>
+                <label for="java">java</label>
+                <input type="checkbox" name="java" value="java" />
+            </li>
+            <li>
+                <label for="python">python</label>
+                <input type="checkbox" name="python" value="python" />
+            </li>
+        </ul>
+    </fieldset>
+
+</body>
+
+</html>
