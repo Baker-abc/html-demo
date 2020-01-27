@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test5</title>
+</head>
+
+<body>
+    <canvas id="mycanvas" width="900px" height="800px">
+        不支持canvas
+    </canvas>
+    <p><input type="button" value="加宽" onclick="addWidth()" /></p>
+    <script type="text/javascript">
+        const mycanvas = document.getElementById("mycanvas");
+        const ctx = mycanvas.getContext("2d");
+
+        // ******************** 绘制实体矩形 ***********************
+        ctx.fillStyle = "red";
+        // （x坐标 y坐标 长 宽）
+        ctx.fillRect(150, 100, 80, 60);
+        //清空指定像素
+        ctx.clearRect(160, 110, 20, 10);
+
+
+        // *****************  画直线  *****************
+        // 开始路径绘制
+        ctx.beginPath();
+        // 设置路径起点，坐标为(20,20)
+        ctx.moveTo(20, 20);
+        // 添加一个(200,200)的新点
+        ctx.lineTo(200, 200);
+        // 设置线宽
+        ctx.lineWidth = 2.0;
+        // 设置线的颜色
+        ctx.strokeStyle = "#CC0000";
+        // 绘制已定义的路径
+        ctx.stroke();
+
+
+        // *****************  画三角形  *****************
+        // 开始路径绘制
+        ctx.beginPath();
+        // 设置路径起点，坐标为(20,20)
+        ctx.moveTo(40, 50);
+        // 添加一个(200,200)的新点
+        ctx.lineTo(200, 300);
+        // 添加一个(400,20)的新点
+        ctx.lineTo(400, 20);
+        //创建从当前点回到起始点的路径
+        ctx.closePath();
+        // 设置线宽
+        ctx.lineWidth = 2.0;
+        // 设置线的颜色
+        ctx.strokeStyle = "#CC0000";
+        // 绘制已定义的路径
+        ctx.stroke();
+
+
+        // ************************ 绘制矩形 ************
+        ctx.rect(10, 10, 100, 200);
+        //绘制已定义的路径
+        ctx.stroke();
+
+
+        // ************************ 绘制矩形 ************
+        ctx.strokeRect(100, 140, 100, 200);
+
+        //************************** 绘制圆形  **************
+        //开始路径绘制
+        ctx.beginPath();
+        //绘制圆
+        ctx.arc(400, 200, 50, 0, 2 * Math.PI);
+        //绘制已定义的路径
+        ctx.stroke();
+
+
+        //************************** 绘制椭圆 *************************
+        ctx.beginPath();
+        //绘制圆
+        ctx.arc(100, 75, 50, 0, 0.5 * Math.PI);
+        //闭合
+        ctx.moveTo(100, 125);
+        ctx.lineTo(100, 75);
+        ctx.lineTo(150, 75)
+        //绘制已定义的路径
+        ctx.stroke();
+
+
+        function addWidth() {
+            console.log(ctx.lineWidth);
+            ctx.lineWidth = ctx.lineWidth + 10;
+            ctx.stroke();
+        }
+
+
+    </script>
+</body>
+
+</html>

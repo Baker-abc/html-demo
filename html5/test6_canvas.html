@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <!--添加canvas元素，设置画布的大小-->
+    <canvas id="mycanvas" width="520px" height="1314px">
+        对不起，你的浏览器不支持canvas
+    </canvas>
+
+    <script type="text/javascript">
+        //获取canvas元素
+        var myCanvas = document.getElementById("mycanvas");
+        //获取Context上下文
+        var ctx = myCanvas.getContext("2d");
+        //设置渐变色
+        var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+        gradient.addColorStop(0, "red");
+        gradient.addColorStop("0.2", "orange");
+        gradient.addColorStop("0.5", "yellow");
+        gradient.addColorStop("0.7", "green");
+        gradient.addColorStop(1, "blue");
+        //填充色为渐变色
+        ctx.fillStyle = gradient;
+        //绘制实心矩形
+        ctx.fillRect(10, 10, 100, 200);
+
+
+        //设置渐变色
+        var gradient2 = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        gradient2.addColorStop(0, "red");
+        gradient2.addColorStop("0.2", "orange");
+        gradient2.addColorStop("0.5", "yellow");
+        gradient2.addColorStop("0.7", "green");
+        gradient2.addColorStop(1, "blue");
+        //填充色为渐变色
+        ctx.fillStyle = gradient2;
+        //绘制实心矩形
+        ctx.fillRect(10, 10, 190, 150);
+    </script>
+</body>
+
+</html>

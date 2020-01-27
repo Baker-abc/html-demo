@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test11</title>
+</head>
+
+<body>
+    <!--
+            本地储存由来的背景
+由于 HTML4 时代 Cookie 的大小、格式、存储数据格式等限制，网站应用如果想在浏览器端存储用户的部分信息，那么只能借助于 Cookie。但是 Cookie 的这些限制，
+也就导致了 Cookie 只能存储一些 ID 之类的标识符等简单的数据。
+
+下面是 Cookie 的限制：
+
+大多数浏览器支持最大为 4096 字节的 Cookie。
+
+浏览器还限制站点可以在用户计算机上存储的 Cookie 的数量。大多数浏览器只允许每个站点存储 20 个 Cookie；如果试图存储更多 Cookie，则最旧的 Cookie 便会被丢弃。
+
+有些浏览器还会对它们将接受的来自所有站点的 Cookie 总数作出绝对限制，通常为 300 个。
+
+Cookie 默认情况都会随着 Http 请求发送到后台服务器，但并不是所有请求都需要 Cookie 的，比如：js、css、图片等请求则不需要 Cookie。
+
+为了破解 Cookie 的一系列限制，HTML5 通过 JS 的新的 API 就能直接存储大量的数据到客户端浏览器，而且支持复杂的本地数据库，让 JS 更有效率。 
+HTML5 支持两种新的 Web Storage：永久性的本地存储（localStorage）和会话级别的本地存储（sessionStorage）。所谓 Web Storage 就是指在 Web 上储存数据的功能，
+而这里的储存，是针对客户端本地而言的。
+        -->
+
+
+    <h1>简单Web留言本</h1>
+    <textarea id="memo" cols="60" rows="6"></textarea><br>
+    <input type="button" value="新增留言" onclick="saveStorage('memo');">
+    <input type="button" value="清空数据" onclick="clearStorage();">
+    <input type="button" value="清空最后一个数据" onclick="clearsingleStorage();">
+    <hr>
+    <p id="msg"></p>
+    <script type="text/javascript">
+        //savaStorage是一个新增留言的函数
+        function saveStorage(id) {
+            //获取textarea的value值
+            var data = document.getElementById(id).value;
+            //获取当前时间
+            var time = new Date().toUTCString();
+            //将当前时间作为键名，textarea的value值（也就是用户输入的值）的值作为键值
+            localStorage.setItem(time, data);
+            //显示留言
+            showMsg('msg');
+        }
+        //showMsg是一个显示留言的函数
+        function showMsg(id) {
+            var result = '<table border="1">';
+            //遍历本地储存数据
+            for (var i = 0; i < localStorage.length; i++) {
+                //获取key值
+                var key = localStorage.key(i);
+
+                //获取value值
+                var value = localStorage.getItem(key);
+                //显示数据
+                result += '<tr><td>' + value + '</td><td>' + key + '</td></tr>';
+
+            }
+            result += '</table>';
+            var target = document.getElementById(id);
+            target.innerHTML = result;
+        }
+        //显示留言
+        showMsg('msg');
+        //clearStorage是一个清空留言的函数
+        function clearStorage() {
+            //清空数据
+            localStorage.clear();
+            //显示留言
+            showMsg('msg');
+        }
+        //clearsingleStorage是一个删除单个数据的函数
+        function clearsingleStorage() {
+            localStorage.removeItem(localStorage.key(localStorage.length - 1));
+            //显示留言
+            showMsg('msg');
+        }
+    </script>
+</body>
+
+</html>

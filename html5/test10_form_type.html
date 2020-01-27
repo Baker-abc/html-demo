@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test10</title>
+</head>
+
+<body>
+    <!--
+     Input 类型 - range
+    range 类型用于应该包含一定范围内数字值的输入域。range 类型显示为滑动条。同样的 range 也有 max，min，value，step 属性与上面所讲的 number 中的一致。
+ -->
+    <form action="#" method="get">
+        range: <input type="range" name="points" min="1" max="10" value="2" step="2" /><br />
+        <input type="submit" value="提交" />
+    </form>
+
+    <!--
+        Input 类型 - Date Pickers（日期选择器）
+HTML5 拥有多个可供选取日期和时间的新输入类型：
+
+date - 选取日、月、年
+
+month - 选取月、年
+
+week - 选取周和年
+
+time - 选取时间（小时和分钟）
+
+datetime - 选取时间、日、月、年（UTC 时间）
+
+datetime-local - 选取时间、日、月、年（本地时间）
+    -->
+
+    <form action="#" method="get">
+        Date: <input type="date" name="user_date" /><br />
+        <input type="submit" value="提交" />
+        <br /><br />
+        Month: <input type="month" name="user_month" /><br />
+        <input type="submit" value="提交" />
+    </form>
+
+    <!--
+        #### Input 类型 - color
+color 类型用于选择颜色。
+    -->
+    <form action="#" method="get">
+        <input type="color" name="colordemo" />
+        <input type="submit" value="提交" />
+    </form>
+
+
+</body>
+
+</html>
