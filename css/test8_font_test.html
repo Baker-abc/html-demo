@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        .box {
+            width: 800px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .title {
+            text-align: center;
+            font: normal 28px "微软雅黑";
+        }
+
+        .sub_title {
+            text-align: center;
+        }
+
+        .sub_title .time {
+            color: #aabbcc;
+            font-size: 14px;
+        }
+
+        .sub_title .nows_title {
+            color: #990000;
+            font-size: 14px;
+        }
+
+        p {
+            text-indent: 2em;
+            line-height: 28px;
+        }
+
+        p span {
+            color: #3399cc;
+        }
+
+        input[type="button"] {
+            color: green;
+            font-weight: 700;
+        }
+
+        input[type="text"] {
+            color: red;
+            font-size: 12px;
+        }
+
+        @font-face {
+            font-family: "Bitstream Vera Serif Bold";
+            src: url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+        }
+
+        .one {
+            font-family: "Bitstream Vera Serif Bold", serif
+        }
+
+        a {
+            color: red;
+            font-family: "微软雅黑";
+            font-size: 1em;
+            font-weight: bold;
+            font-style: italic;
+            text-transform: lowercase;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: circle;
+            list-style-position: inside;
+            background-color: blueviolet;
+        }
+
+        ol {
+            list-style-type: lower-alpha;
+        }
+
+        li {
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h2 class="title">知道程序猿为什么没有女朋友吗？真正的原因在这~</h2>
+
+        <div class="sub_title">
+            <span class="time">2018年11月11日11:11</span>
+            <span class="nows_title">娱乐新闻（纯属虚构，当做例子）</span>
+            <a href="#">收藏本文</a>
+
+            <input type="text" value="请输入查询条件">
+            <input type="button" value="搜索">
+
+        </div>
+
+        <hr>
+
+        <p>胡编乱造社为您报道：　程序猿们好不容易通过自己的努力（多少个日日夜夜的编码生活，越来越快的打字速度，爱恨交加的<span>[bug]</span>），进入了 IT
+            行业。梦想中的生活是：升职加薪当上CEO，迎娶白富美，走向人生巅峰。然后现实是别人的生活是：一杯茶，一包烟，一只破股看一天；而程序猿的生活却是：一卷纸，一双手，一部电影看一宿？</p>
+
+        <div class="one">那程序猿为啥没有女朋友呢？先带你们看一个很有趣的现象，程序猿在跟妹子聊天的时候，说的所有话，可以总结成下面这首打油诗：</div>
+        <ul>
+            <li>在哪干嘛吃了没</li>
+            <li>哎呀心疼喝热水</li>
+            <li>多穿快回外面冷</li>
+            <li>你忙好梦早点睡</li>
+        </ul>
+
+        <p>但是程序猿在被提 bug 时，通常反应会是这样的：</p>
+        <ol>
+            <li>怎么可能，你再试一下。</li>
+            <li>在我这是好的，不信你来看看。</li>
+            <li>真奇怪，刚刚还好好的，你没改什么东西吧。</li>
+            <li>你清下缓存试试。</li>
+            <li>你重启下电脑试试。</li>
+            <li>你装的什么版本的JDK。</li>
+            <li>你怎么还在用360浏览器，你下载个谷歌浏览器肯定没问题。</li>
+            <li>用户不会像你这样操作的。</li>
+        </ol>
+
+    </div>
+
+</body>
+
+</html>

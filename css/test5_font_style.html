@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test5</title>
+    <style type="text/css">
+        @font-face {
+            font-family: "Bitstream Vera Serif Bold";
+            src: url("http://developer.mozilla.org/@api/deki/files/2934/=VeraSeBd.ttf");
+        }
+
+        body {
+            font-family: "Bitstream Vera Serif Bold", serif
+        }
+
+        p {
+            text-align: center;
+            background-color: red;
+            color: blue;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea cols="100" rows="10">
+        文本对齐：通过 text-align 属性来控制文本它所在的内容盒子对齐的方式。常用值为：
+                  left：文本左对齐。
+                  right：文本右对齐。
+                  center：文本居中对齐。
+                  
+        行高：通过 line-height 属性来设置文本每行之间的高。浏览器默认字体大小为:16 px，
+              而浏览器默认行高为：18 px。行高=上间距+文字大小+下间距。上下间距是相等的，如果字体大小为 20 px，
+              它的父元素 div 的高度为 40 px，那么我们只需要设置行高为 40 px，就可以使文字相对于 div 盒子垂直居中。
+    </textarea>
+    <p>好好学习</p>
+
+
+</body>
+
+</html>

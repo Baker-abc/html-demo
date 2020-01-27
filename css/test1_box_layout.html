@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test1</title>
+    <style type="text/css">
+        p {
+            width: 500px;
+            height: 2.5em;
+            padding: 1em;
+            border: 1px solid black;
+        }
+
+        .one {
+            overflow: auto;
+        }
+
+        .two {
+            overflow: hidden;
+        }
+
+        .three {
+            overflow: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea cols="100" rows="10">
+
+            padding：内边距
+            border：边框
+            margin：外边距
+            auto:当内容过多的时候溢流的内容被隐藏，然后出现滚动条，让我们滚动查看所有的内容。
+            hidden: 当内容过多，溢流的内容被隐藏。
+            visible: 当内容过多，溢流的内容被显示在盒子的外边。
+
+        </textarea>
+    <h3>overflow:auto</h3>
+    <p class="one">
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+    </p>
+
+    <h3>overflow:hidden</h3>
+    <p class="two">
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+    </p>
+
+    <h3>overflow:visible</h3>
+    <p class="three">
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+        我爱学习，学习使我快乐！我爱学习，学习使我快乐！
+    </p>
+</body>
+
+</html>
