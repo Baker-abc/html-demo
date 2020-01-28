@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test15</title>
+    <style type="text/css">
+        #syl {
+            color: yellow;
+            font-size: 10px;
+        }
+
+        .box {
+            color: green;
+            font-size: 60px;
+        }
+
+        div {
+            color: red !important;
+            font-size: 60px !important;
+        }
+
+        .box2 {
+            font-size: 100px;
+            color: blue;
+        }
+
+        .box {
+            font-size: 60px;
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>css 层叠形 继承性</h1>
+    <textarea cols="200" rows="20">
+        层叠性
+            层叠性是指多种 CSS 样式的叠加。而最终什么选择器在层叠中胜出遵循下列规则。
+               !important 具有最大优先级。也就是说任何情况下，只要定义了它,它的样式最终就会被应用。
+               源代码出现次序。
+
+            
+               这里的先后次序不是说 class 里面类名的先后次序，而是说定义样式的先后顺序。上述例子中先定义的 box2 类样式，再定义的 box 类样式，
+               最后显示的是 box 类中的样式。
+               优先级：
+                  规则（1）：行内样式 > 页内样式 > 外部引用样式 > 浏览器默认样式。
+                  规则（2）：important > 内联 > ID > 伪类|类 | 属性选择 > 标签 > 伪对象 > 通配符 > 继承。另外权重会叠加，所以为了便于理解，权重设置如下：
+                     1 表示标签选择器的权重
+                     10 表示类选择器的权重
+                     100 表示 ID 选择器的权重
+                     1000 表示内联样式的权重
+               注：权重相同时，CSS 遵循就近原则。也就是说靠近元素的样式具有最大的优先级，或者说排在最后的样式优先级最大。所有都相同时，声明靠后的优先级大。
+
+        
+        继承性
+            继承性就是指我们写 CSS 样式表的时候子元素会继承父元素的某些样式，比如文本颜色和字号。
+            注：想要设置一个可继承的属性，只需将它应用于父元素即可。所有字相关的都可以继承，比如：color、text-系列、font-系列、line-系列等。并不是所有的 CSS 属性都可以继承，
+            例如：边框、外边距、内边距、背景、定位、元素宽高属性就不能继承。所有盒子相关的属性都不能继承例如：a 标签，h1 标签不会实现继承。
+    </textarea>
+
+    <div class="box" id="syl" style="font-size:12px; color:yellow;">
+        实验楼
+    </div>
+
+    <p class="box box2 ">好好学习</p>
+
+</body>
+
+</html>

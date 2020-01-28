@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test13</title>
+    <style type="text/css">
+        * {
+            color: red;
+        }
+
+        p.one {
+            color: blue;
+        }
+
+        p#two {
+            color: yellow;
+        }
+
+        .one #two p {
+            color: red;
+        }
+
+
+        p[title="one"] {
+            color: red;
+        }
+
+        p[title~="two"] {
+            color: green;
+        }
+
+        p[title|="three"] {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea cols="100" rows="10">
+        通配符选择器用“*”号表示，他是所有选择器中作用范围最广的，能匹配页面中所有的元素。其基本语法格式如下。
+        标签指定式选择器：        
+            标签指定式选择器又称交集选择器，由两个选择器构成，其中第一个必须是标签选择器，第二个为 class 选择器或 ID 选择器。
+            两个选择器之间不能有空格。简单记忆为：并且的意思。即...又...的意思，比如 p.one 选择的是类名为 one 的段落标签
+        后代选择器：
+            后代选择器又叫包含选择器，用来选择元素或元素组的后代。其写法就是把外层标记写在前面，内层标记写在后面，中间用空格分隔。
+            当标记发生嵌套时，内层标记就成为外层标记的后代。
+        子代选择器：
+            与后代选择器相比，子元素选择器只能选择作为某个元素的子元素。子选择器使用大于号作为子结合符。
+            例如你只想选择 p 元素的子元素 strong 元素，为其设置样式。你可以这么写：
+            p>strong {
+                color: red;
+            }
+            上述例子中，只有第一个 p 标签中的两个 strong 元素变成了红色，
+            而第二个 p 标签中的 两个 strong 元素不受影响。而如果改成后代选择器,上诉例子中的 style 标签里面改成下面的代码，其余代码不变
+            p strong {
+                color: red;
+            }
+            子代选择器只选择指定标签的第一代子元素或者理解为它的直接后代（只指定儿子，而不管孙子），后代选择器是作用于
+            所有子后代元素（不只儿子，还可以选择到孙子，重孙子等等）。
+        并集选择器：
+            并集选择器是各个选择器通过逗号连接而成的，任何形式的选择器（包括标签选择器、class 类选择器、id 选择器等），都可以作为并集选择器的一部分。
+            如果某些选择器定义的样式完全相同，或部分相同，就可以利用并集选择器为它们定义相同的 CSS 样式。简单记忆为：和的意思。
+
+    </textarea>
+    <h2>*</h2>
+    <h2>练习</h2>
+    <h2>练习</h2>
+
+    <h2>标签制定式选择器</h2>
+    <p class="one">练习</p>
+    <p id="two">练习</p>
+
+    <h2>后代选择器</h2>
+    <div class="one2">
+        <div id="two2">
+            <p>实验楼</p>
+        </div>
+    </div>
+
+    <h2>子代选择器</h2>
+    <p>
+        <strong>实验楼</strong>
+        <strong>实验楼</strong>
+    </p>
+    <p>
+        <em>
+            <strong>实验楼</strong>
+            <strong>实验楼</strong>
+        </em>
+    </p>
+    <div>
+        <img src="./css_select.png" />
+    </div>
+
+    <p>属性选择器</p>
+    <p title="five">我爱学习</p>
+    <p title="one">我爱运动</p>
+    <p title="one two">我爱吃饭</p>
+    <p title="three-four">我爱睡觉</p>
+
+</body>
+
+</html>
