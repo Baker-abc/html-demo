@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 100px;
+            position: relative;
+            border: 1px dashed green;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            border: 1px dashed blue;
+            top: 20px;
+            left: 20px;
+        }
+
+        .one {
+            position: fixed;
+            top: 200px;
+            left: 100px;
+            color: red;
+        }
+
+        .box {
+            position: absolute;
+            left: 0px;
+            top: 440px;
+            z-index: -1;
+            background-color: red;
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea cols="100" rows="20">
+        静态定位：静态定位就是按照标准流的方式显示，静态定位的元素不会受到 top， bottom， left， right 影响。语法为:
+        position：static;
+
+        绝对定位：绝对定位以浏览器左上角为基准设置位置当一个盒子包含在另一个盒子中，父盒子未设置定位，子盒子以浏览器左上角为基准设置位置； 
+                  当父盒子设置定位，子盒子以父盒子左上角为基准设置位置
+                  绝对定位不占空间位置（类似于浮动）
+        position：absolute;
+
+        相对定位：相对定位以元素自身的位置为基准设置位置
+                  相对定位要占空间位置
+                  一般子元素设置绝对定位，父元素设置相对定位（子绝父相）
+        position：relative;
+
+        固定定位：固定定位表现类似于绝对定位，只有一个主要区别：绝对定位固定元素是相对于 <html> 元素或其最近的定位祖先，
+                  而固定定位固定元素则是相对于浏览器视口本身。固定定位也不占空间位置，语法为：
+        position：fixed;
+
+    </textarea>
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <p class="one">好好学习</p>
+
+    <h1>这是一个标题</h1>
+    <div class="box"></div>
+    <p>默认的 z-index 是 0。Z-index -1 拥有更低的优先级。</p>
+</body>
+
+</html>
